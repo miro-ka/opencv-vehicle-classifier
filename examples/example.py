@@ -1,11 +1,11 @@
 import cv2
 
 # Load input image
-image = cv2.imread('dataset/vehicle_detection_1.jpg')
+image = cv2.imread('../dataset/input_1.jpg')
 # Convert image to gray to speed up classification
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # Load classifier
-classifier = cv2.CascadeClassifier('classifier/cascade.xml')
+classifier = cv2.CascadeClassifier('../classifier/cascade.xml')
 # Send image to classification. If the classifier could detect vehicles it will return
 # list of rectangles
 rects = classifier.detectMultiScale(gray,
